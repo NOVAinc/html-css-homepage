@@ -1,0 +1,45 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.top-decoration,
+.bottom-decoration {
+  position: absolute;
+  background-color: #d486a5;
+  height: 300px;
+  width: 100%;
+}
+
+.top-decoration {
+  top: 0px;
+  transform-origin: bottom left;
+  transform: skewY(-15deg);
+}
+
+.bottom-decoration {
+  bottom: 0px;
+}
+
+section,
+footer {
+  margin: 2.5rem 3rem;
+  position: relative;
+}
+
+footer {
+  display: flex;
+}
+
+.portfolio-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.portfolio-card {
+  width: 250px;
+}
