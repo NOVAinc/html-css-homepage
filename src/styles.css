@@ -1,3 +1,48 @@
+section {
+  margin: 2.5rem 5rem;
+  max-width: 900px;
+}
+
+header,
+footer {
+  position: relative;
+}
+
+main,
+footer {
+  width: auto;
+  justify-self: center;
+}
+
+.about-me-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 350px;
+}
+
+.profile-photo-container {
+  height: 100%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+.profile-photo-container h1 {
+  color: white;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+  text-align: center;
+  margin-top: -3rem;
+}
+
+.about-me-text {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  padding: 1rem 1.5rem;
+  height: 250px;
+}
+
 .portfolio-container {
   display: flex;
   flex-flow: row wrap;
@@ -7,13 +52,14 @@
 .portfolio-card {
   display: flex;
   flex-direction: column;
-  max-width: 200px;
-  box-shadow: 0 0 5px black;
+  min-width: 250px;
+  flex: 1;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .portfolio-card img {
-  object-fit: cover;
   height: 175px;
+  object-fit: cover;
 }
 
 .project-text {
@@ -26,4 +72,12 @@
   justify-content: space-between;
   align-items: center;
   height: 24px;
+}
+
+.top-decoration,
+.bottom-decoration {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 0, 0);
 }
