@@ -9,6 +9,7 @@ body {
   gap: 4rem;
   margin: 0;
   align-content: center;
+  overflow: hidden;
 }
 
 section {
@@ -196,8 +197,13 @@ footer {
 
 /* TODO: Tablet layout */
 @media (359px < width < 800px) {
+  body {
+    overflow: hidden;
+  }
+
   section {
-    margin: 4rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
   }
 
   .about-me-section {
@@ -235,6 +241,8 @@ footer {
     margin-left: 50px;
     margin-top: 150px;
     z-index: 1;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   .links-top {
