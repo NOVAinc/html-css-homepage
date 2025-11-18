@@ -9,7 +9,6 @@ body {
   gap: 4rem;
   margin: 0;
   align-content: center;
-  overflow: hidden;
 }
 
 section {
@@ -23,7 +22,7 @@ header,
 main,
 footer {
   width: 100%;
-  overflow: visible;
+  overflow: hidden;
 }
 
 /* Create common stacking context to arrange z-index of background and section */
@@ -197,10 +196,6 @@ footer {
 
 /* TODO: Tablet layout */
 @media (359px < width < 800px) {
-  body {
-    overflow: hidden;
-  }
-
   section {
     margin-left: 4rem;
     margin-right: 4rem;
