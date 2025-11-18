@@ -1,5 +1,6 @@
 :root {
   --bg-color: rgb(52, 145, 145);
+  --top-photo-height: 300px;
 }
 
 body {
@@ -71,18 +72,26 @@ svg {
 
 .profile-photo-container {
   height: 100%;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   z-index: 2;
   display: flex;
   flex-direction: column;
   justify-items: center;
 }
 
+.profile-photo-container img {
+  position: relative;
+  isolation: isolate;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
 .profile-photo-container h1 {
+  position: relative;
   color: white;
   filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
   text-align: center;
-  margin-top: -3rem;
+  bottom: 5rem;
+  z-index: 2;
 }
 
 h1,
@@ -99,6 +108,7 @@ h1 {
   background: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   padding: 1rem 1.5rem;
+  z-index: 1;
 }
 
 .links-top {
@@ -182,4 +192,56 @@ footer {
 .bottom-links svg {
   height: 35px;
   width: 35px;
+}
+
+/* TODO: Tablet layout */
+@media (359px < width < 800px) {
+  section {
+    margin: 4rem;
+  }
+
+  .about-me-section {
+    display: block;
+    isolation: isolate;
+  }
+
+  .profile-photo-container {
+    position: relative;
+    width: min-content;
+    float: left;
+    margin-top: -100px;
+    margin-right: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .profile-photo-top img {
+    height: var(--top-photo-height);
+    width: auto;
+  }
+
+  .profile-photo-container h1 {
+    position: absolute;
+    width: calc(100vw - 6.5rem);
+    text-align: right;
+    top: -0.5rem;
+  }
+
+  .about-me-text h2 {
+    text-align: center;
+  }
+
+  .about-me-text {
+    position: relative;
+    margin-left: 50px;
+    margin-top: 150px;
+    z-index: 1;
+  }
+
+  .links-top {
+    display: none;
+  }
+}
+
+/* TODO: Mobile layout */
+@media (width < 360px) {
 }
