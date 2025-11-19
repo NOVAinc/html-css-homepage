@@ -67,7 +67,7 @@ svg {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 350px;
+  /* height: min-content; */
 }
 
 .profile-photo-container {
@@ -195,6 +195,10 @@ footer {
 
 /* TODO: Tablet layout */
 @media (359px < width < 800px) {
+  header::before {
+    bottom: 30%;
+  }
+
   section {
     margin-left: 4rem;
     margin-right: 4rem;
@@ -243,4 +247,63 @@ footer {
 
 /* TODO: Mobile layout */
 @media (width < 360px) {
+  header::before {
+    margin-top: -450px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .contact-section {
+    margin-bottom: 0;
+  }
+
+  .contact {
+    width: 80vw;
+    align-self: center;
+  }
+
+  .about-me-text {
+    box-shadow: none;
+  }
+
+  .about-me-section {
+    flex-direction: column;
+  }
+
+  .links-top {
+    justify-self: center;
+  }
+
+  .contact-section {
+    flex-direction: column;
+  }
+
+  .bottom-links {
+    justify-self: center;
+  }
+
+  .contact-section img {
+    width: 100vw;
+    height: auto;
+    margin-top: 4rem;
+  }
+
+  .contact-line p {
+    margin: 0.5rem 0;
+  }
+
+  .contact-line svg:nth-child(1) {
+    display: none;
+  }
+
+  .profile-photo-container img {
+    width: 80vw;
+  }
+
+  .profile-photo-container h1 {
+    text-align: left;
+    margin: -6.5rem 0 0 1rem;
+  }
 }
